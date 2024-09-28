@@ -52,29 +52,25 @@ class CONTROLLER:
 		self.pitch = math.degrees(self.pitch)
 		self.yaw = math.degrees(self.yaw)
 
-	def control_servo(self, servo_pwm_big, servo_pwm_small):
+	def control_servo(self, servo_channel, servo_value):
 		rc_msg = OverrideRCIn()
 		rc_msg.channels = [0] * 18
-		rc_msg.channels[6] = servo_pwm_big
-		rc_msg.channels[7] = servo_pwm_small
+		rc_msg.channels[servo_channel - 1] = servo_value
 
 		# Publish the message
 		self.publish_servo.publish(rc_msg)
-
-	def stable_arm(self):
-		self.euler_from_quaternion()
-		self.servo_pwm_big = int((self.pitch/40.0)*500.0 + 1500.0)
-		self.servo_pwm_small = 1500
-		self.control_servo(self.servo_pwm_big, self.servo_pwm_small)
 
 if __name__ == '__main__':
 	try:
 		arm = CONTROLLER()
 		rate = rospy.Rate(1000)  # Set to 1Hz to print every second
-
+	   
 		while not rospy.is_shutdown():
-			arm.stable_arm()
-			rate.sleep()		
+			# arm.euler_from_quaternion()
+			# print("Roll:", arm.roll, " Pitch:", arm.pitch, " Yaw:", arm.yaw)
+
+			arm.control_servo(7, 2000)
+			rate.sleep()
 
 	except rospy.ROSInterruptException:
 		pass
