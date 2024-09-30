@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator_drone">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.141452806250045 0.213872102188247 0.268022885593013"
+        rpy="0 0 0" />
+      <mass
+        value="0.376485958847895" />
+      <inertia
+        ixx="0.00599866182917377"
+        ixy="-5.71160033180147E-08"
+        ixz="1.36031685774139E-06"
+        iyy="0.0112555868666883"
+        iyz="5.22807789062921E-07"
+        izz="0.00599669939937149" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="prop1">
+    <inertial>
+      <origin
+        xyz="0.015674 5.3103E-07 2.1609E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.012431" />
+      <inertia
+        ixx="2.5392E-05"
+        ixy="5.8618E-11"
+        ixz="-3.5813E-13"
+        iyy="2.548E-05"
+        iyz="-2.8652E-07"
+        izz="5.1399E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop1"
+    type="revolute">
+    <origin
+      xyz="0.297 -0.42359 0.25709"
+      rpy="2.8056 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop2">
+    <inertial>
+      <origin
+        xyz="0.015674 5.3103E-07 2.1609E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.012431" />
+      <inertia
+        ixx="2.5392E-05"
+        ixy="5.8618E-11"
+        ixz="-3.5813E-13"
+        iyy="2.548E-05"
+        iyz="-2.8652E-07"
+        izz="5.1399E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop2"
+    type="revolute">
+    <origin
+      xyz="0.297 -0.11246 0.25709"
+      rpy="2.4199 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop3">
+    <inertial>
+      <origin
+        xyz="0.015674 5.3103E-07 2.1609E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.012431" />
+      <inertia
+        ixx="2.5392E-05"
+        ixy="5.8618E-11"
+        ixz="-3.5813E-13"
+        iyy="2.548E-05"
+        iyz="-2.8652E-07"
+        izz="5.1399E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop3"
+    type="revolute">
+    <origin
+      xyz="-0.014129 -0.11246 0.25709"
+      rpy="2.9173 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="prop4">
+    <inertial>
+      <origin
+        xyz="0.015674 5.3103E-07 2.1609E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.012431" />
+      <inertia
+        ixx="2.5392E-05"
+        ixy="5.8618E-11"
+        ixz="-3.5813E-13"
+        iyy="2.548E-05"
+        iyz="-2.8652E-07"
+        izz="5.1399E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/prop4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop4"
+    type="revolute">
+    <origin
+      xyz="-0.014129 -0.42359 0.25709"
+      rpy="2.8341 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm1">
+    <inertial>
+      <origin
+        xyz="0.015 0.060915 -3.8858E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.068734" />
+      <inertia
+        ixx="0.00014566"
+        ixy="-9.7142E-19"
+        ixz="3.5965E-20"
+        iyy="9.8878E-06"
+        iyz="4.3672E-19"
+        izz="0.00015105" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49804 0.49804 0.49804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="manipulator_joint_1"
+    type="revolute">
+    <origin
+      xyz="0.12643 -0.26803 0.24709"
+      rpy="1.6095 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm2">
+    <inertial>
+      <origin
+        xyz="0.015 0.027141 1.6653E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.034551" />
+      <inertia
+        ixx="1.073E-05"
+        ixy="4.3736E-20"
+        ixz="1.4977E-20"
+        iyy="3.9851E-06"
+        iyz="-2.2552E-20"
+        izz="1.243E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_drone/meshes/arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="manipulator_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.13 0"
+      rpy="-1.4188 0 0" />
+    <parent
+      link="arm1" />
+    <child
+      link="arm2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
